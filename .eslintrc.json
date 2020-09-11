@@ -1,0 +1,89 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": ".",
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "eslint-plugin-react",
+    "eslint-plugin-react-hooks",
+    "eslint-plugin-import-helpers",
+    "eslint-plugin-import",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "eol-last": "error",
+    "jsx-quotes": ["error", "prefer-single"],
+    "import-helpers/order-imports": [
+      2,
+      {
+        "groups": [
+          "/^react$/",
+          "module",
+          "parent",
+          ["sibling", "index"]
+        ],
+        "newlinesBetween": "always",
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": true
+        }
+      }
+    ],
+    "max-len": ["error", { "code": 120 }],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-extra-semi": 0,
+    "no-irregular-whitespace": "off",
+    "no-shadow": "error",
+    "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
+    "quotes": ["error", "single"],
+    "react/jsx-key": "error",
+    "react/jsx-boolean-value": ["error", "always"],
+    "react/jsx-child-element-spacing": "off",
+    "react/jsx-closing-bracket-location": "error",
+    "react/jsx-closing-tag-location": "error",
+    "react/jsx-no-bind": ["error", { "allowArrowFunctions": true }],
+    "react-hooks/rules-of-hooks": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/self-closing-comp": ["error", { "component": true, "html": true }],
+    "semi": ["error", "always"],
+    "sort-imports": ["error", { "ignoreCase": true, "ignoreDeclarationSort": true }],
+    "@typescript-eslint/array-type": ["error", { "default": "array-simple", "readonly": "array-simple" }],
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/ban-types": ["error", {
+      "types": {
+        "Object": "Avoid using the `Object` type. Did you mean `object`?",
+        "Function": "Avoid using the `Function` type. Prefer a specific function type, like `() => void`.",
+        "Boolean": "Avoid using the `Boolean` type. Did you mean `boolean`?",
+        "Number": "Avoid using the `Number` type. Did you mean `number`?",
+        "String": "Avoid using the `String` type. Did you mean `string`?",
+        "Symbol": "Avoid using the `Symbol` type. Did you mean `symbol`?"
+      }
+    }],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/interface-name-prefix": [2, { "prefixWithI": "always" }],
+    "@typescript-eslint/member-delimiter-style": [2, { "multiline": { "requireLast": true }, "singleline": { "requireLast": true } }],
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-untyped-public-signature": ["error", { "ignoredMethods": ["render"] }],
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/require-await": "off",
+    "@typescript-eslint/restrict-plus-operands": "error",
+    "@typescript-eslint/restrict-template-expressions": ["error", { "allowNumber": true }]
+  }
+}
