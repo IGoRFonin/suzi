@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { createReducer } from 'typesafe-actions';
 import { changeSearch, clearSearch } from '../actions/youtubeActions';
 
-const youtubeSearchReducer = createReducer('' as string)
+const youtubeSearchReducer = createReducer('')
     .handleAction(changeSearch, (_state, action) => action.payload)
     .handleAction(clearSearch, (_state, _action) => '');
 

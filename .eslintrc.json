@@ -24,7 +24,6 @@
   "rules": {
     "comma-dangle": ["error", "always-multiline"],
     "eol-last": "error",
-    "jsx-quotes": ["error", "prefer-single"],
     "import-helpers/order-imports": [
       2,
       {
