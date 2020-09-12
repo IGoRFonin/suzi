@@ -73,7 +73,7 @@
     }],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/interface-name-prefix": [2, { "prefixWithI": "always" }],
-    "@typescript-eslint/member-delimiter-style": [2, { "multiline": { "requireLast": true }, "singleline": { "requireLast": true } }],
+    "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-empty-interface": "warn",
     "@typescript-eslint/no-inferrable-types": "off",

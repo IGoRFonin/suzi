@@ -1,16 +1,17 @@
 import React from 'react';
 
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
-import App from './components/App/App';
-import * as serviceWorker from './serviceWorker';
+import App from './App';
+import { store } from './store';
 import ThemeWrapper from './theme/ThemeProvider';
 
 ReactDOM.render(
-    <ThemeWrapper>
-        <App />
-    </ThemeWrapper>,
+    <Provider store={store}>
+        <ThemeWrapper>
+            <App />
+        </ThemeWrapper>
+    </Provider>,
     document.getElementById('root'),
 );
-
-serviceWorker.unregister();
