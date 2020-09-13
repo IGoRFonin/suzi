@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", "Segoe UI", sans-serif;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 16px;
+}
