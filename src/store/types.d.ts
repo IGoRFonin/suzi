@@ -1,4 +1,5 @@
-import { StateType, ActionType } from 'typesafe-actions';
+/* eslint-disable @typescript-eslint/interface-name-prefix */
+import { ActionType, StateType } from 'typesafe-actions';
 
 declare module 'typesafe-actions' {
     export type Store = StateType<typeof import('./index').default>;

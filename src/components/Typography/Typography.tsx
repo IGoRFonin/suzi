@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { makeStyles, Theme } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -12,11 +13,12 @@ const useStyles = makeStyles((theme: Theme) => ({
 type Typography = {
     as: 'h1' | 'h2' | 'body1' | 'body2' | 'subtitle1';
     children: JSX.Element | string;
+    className?: string;
 };
 
-const Typography = ({ as, children }: Typography) => {
+const Typography = ({ as, children, className = '' }: Typography) => {
     const classes = useStyles();
-    return <div className={classes[as]}>{children}</div>;
+    return <div className={[classes[as], className].join(' ').trim()}>{children}</div>;
 };
 
 export default Typography;

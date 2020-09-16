@@ -1,5 +1,8 @@
-import * as youtubeAction from '../pages/actions/youtubeActions';
+import * as youtubeAction from '../pages/youtubeActions';
+
+import { YTDownloaderAction } from './../pages/ytDownloaderAction';
 
 export default {
     youtube: youtubeAction,
+    ytDownloader: YTDownloaderAction,
 };
